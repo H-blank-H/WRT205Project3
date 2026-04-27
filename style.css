@@ -7,29 +7,41 @@ body {
   font-family: Georgia, serif;
   color: #222;
   line-height: 1.7;
-  background: url("images/talkingtophoneai.png") center / cover no-repeat fixed;
+
+  background:
+    url("images/talkingtophoneai.png") center / cover no-repeat fixed;
+
   background-color: #0a0a0a;
 }
 
 .page {
   width: min(900px, 86%);
   margin: 0 auto;
+
   min-height: 100vh;
+
   position: relative;
   z-index: 2;
+
   box-shadow: 0 0 40px rgba(0,0,0,0.4);
+
   background: transparent;
 }
 
 .hero {
   min-height: 110vh;
+
   padding: 120px 50px 160px;
+
   border-bottom: 1px solid rgba(255,255,255,0.1);
+
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   background: rgba(0, 0, 0, 0.35);
   backdrop-filter: blur(2px);
+
   color: white;
 }
 
@@ -86,6 +98,10 @@ body {
 .dark {
   background: #1f1f1f;
   color: white;
+}
+
+.dark p {
+  color: rgba(255,255,255,0.85);
 }
 
 .compare {
@@ -229,6 +245,7 @@ body::before {
   content: "";
   position: fixed;
   inset: 0;
+
   background: linear-gradient(
     to right,
     rgba(0,0,0,0.6),
@@ -236,6 +253,7 @@ body::before {
     rgba(0,0,0,0.15),
     rgba(0,0,0,0.6)
   );
+
   z-index: 1;
   pointer-events: none;
 }
@@ -256,15 +274,10 @@ h2 {
 
 .image-section {
   margin: 60px 0;
-  display: flex;
-  justify-content: center;
 }
 
 .image-section img {
   width: 100%;
-  max-width: 420px;
-  height: 300px;           /* force smaller height */
-  object-fit: cover;       /* crop instead of stretch */
-  object-position: top;    /* show top (important part) */
-  border-radius: 12px;
+  height: auto;
+  display: block;
 }
