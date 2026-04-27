@@ -262,9 +262,9 @@ h2 {
 
 .image-section img {
   width: 100%;
-  max-width: 400px;
-  max-height: 450px;
-  object-fit: contain;
-  display: block;
+  max-width: 420px;
+  height: 300px;           /* force smaller height */
+  object-fit: cover;       /* crop instead of stretch */
+  object-position: top;    /* show top (important part) */
   border-radius: 12px;
 }
