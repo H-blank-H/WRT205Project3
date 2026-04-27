@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  color: #222;
+  line-height: 1.7;
+  background: url("images/talkingtophoneai.png") center / cover no-repeat fixed;
+  background-color: #0a0a0a;
+}
+
+.page {
+  width: min(900px, 86%);
+  margin: 0 auto;
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 0 40px rgba(0,0,0,0.4);
+  background: transparent;
+}
+
+.hero {
+  min-height: 110vh;
+  padding: 120px 50px 160px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.35);
+  backdrop-filter: blur(2px);
+  color: white;
+}
+
+.hero h1 {
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 1;
+  margin: 0 0 20px;
+}
+
+.hero p {
+  font-size: 1.4rem;
+  max-width: 650px;
+}
+
+.content {
+  padding: 70px 50px;
+}
+
+.content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 20px;
+}
+
+.content p {
+  font-size: 1.15rem;
+  margin-bottom: 22px;
+}
+
+.quote {
+  padding: 80px 50px;
+  background: #111;
+  color: white;
+  text-align: center;
+}
+
+.quote p {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  line-height: 1.2;
+  margin: 0;
+}
+
+.image-box {
+  margin: 40px 50px;
+  height: 350px;
+  border: 2px dashed #777;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+  color: #555;
+  text-align: center;
+}
+
+.dark {
+  background: #1f1f1f;
+  color: white;
+}
+
+.compare {
+  padding: 70px 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+}
+
+.compare div {
+  padding: 30px;
+  border: 2px solid #222;
+  background: white;
+}
+
+.compare h3 {
+  font-size: 1.7rem;
+  margin-top: 0;
+}
+
+@media (max-width: 700px) {
+  .content,
+  .hero,
+  .quote {
+    padding: 50px 25px;
+  }
+
+  .image-box {
+    margin: 30px 25px;
+  }
+
+  .compare {
+    grid-template-columns: 1fr;
+    padding: 50px 25px;
+  }
+}
+
+.video-box {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  margin-top: 25px;
+  background: #111;
+}
+
+.video-box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 0%;
+  background: #00d4ff;
+  z-index: 9999;
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.reveal.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.story-step {
+  min-height: 120vh;
+  padding: 60px 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+  background: #fdfcf8;
+}
+
+.sticky-visual {
+  position: sticky;
+  top: 80px;
+  height: 70vh;
+  border-radius: 20px;
+  padding: 30px;
+  display: flex;
+  align-items: end;
+  color: white;
+  overflow: hidden;
+}
+
+.sticky-visual h2 {
+  font-size: clamp(2rem, 4vw, 4rem);
+  line-height: 1;
+  margin: 0;
+  z-index: 2;
+}
+
+.ai-glow {
+  background:
+    radial-gradient(circle at 30% 30%, rgba(0, 212, 255, 0.7), transparent 35%),
+    linear-gradient(135deg, #0a0f24, #111);
+}
+
+.human-glow {
+  background:
+    radial-gradient(circle at 70% 30%, rgba(255, 180, 90, 0.8), transparent 35%),
+    linear-gradient(135deg, #2b160c, #111);
+}
+
+.step-text {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.step-text p {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 800px) {
+  .story-step {
+    grid-template-columns: 1fr;
+  }
+
+  .sticky-visual {
+    position: relative;
+    top: 0;
+    height: 45vh;
+  }
+
+  .step-text {
+    min-height: auto;
+  }
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(0,0,0,0.6),
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.15),
+    rgba(0,0,0,0.6)
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+.content,
+.compare {
+  background: #fdfcf8;
+}
+
+.content,
+.story-step {
+  color: #222;
+}
+
+h2 {
+  color: #111;
+}
+
+.image-section {
+  margin: 60px 0;
+}
+
+.image-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
