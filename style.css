@@ -263,3 +263,17 @@ h2 {
   height: auto;
   display: block;
 }
+
+.image-section {
+  margin: 60px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.image-section img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
